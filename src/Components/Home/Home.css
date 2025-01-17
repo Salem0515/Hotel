@@ -107,14 +107,52 @@
     
 }
 
-.navbar .search{
-    border-left: var(--green-color);
-
+.navbar .search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid var(--green-color); /* Add a border on the left */
+    padding-left: 10px; /* Add padding for spacing */
+    margin-left: 20px; /* Provide spacing from the previous element */
+    background-color: #f5f5f5; /* Set a background color */
+    border-radius: 30px; /* Make it rounded */
+    padding-right: 20px; /* Padding to the right for the input */
+    transition: background-color 0.3s ease-in-out; /* Smooth transition effect */
 }
 
-.navbar .search svg{
+.navbar .search:hover {
+    background-color: #e0f7fa; /* Change background on hover */
+}
+
+.navbar .search svg {
     color: var(--green-color);
+    font-size: 18px; /* Set a size for the magnifying glass icon */
+    margin-right: 10px; /* Space between icon and input */
 }
+
+.navbar .search input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    padding: 8px 0; /* Adjust input padding */
+    width: 100%; /* Allow input to take available space */
+    border-radius: 30px; /* Rounded corners */
+}
+
+.navbar .search input::placeholder {
+    color: #888; /* Lighter placeholder color */
+    font-size: 14px; /* Adjust placeholder font size */
+}
+
+.navbar .search input:focus {
+    border: none;
+    outline: none;
+    color: #000; /* Focus text color */
+}
+
+
 
 .navbar-toggler {
     display: none;
