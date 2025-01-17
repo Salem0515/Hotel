@@ -7,7 +7,7 @@ import Rooms from './Components/Rooms/Rooms';
 const App = () => {
   return (
     <div>
-      <Router basename="/Bondi_Hotel">
+      <Router basename="/Hotel">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/signin-signup" element={<SigninSignup />} />
