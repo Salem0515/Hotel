@@ -1,0 +1,436 @@
+/* Add this block for slide-left animation */
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes changeColors {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+
+.body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+/* Apply the slide-left animation on hover */
+.slide-left {
+    transition: transform 0.5s ease-in-out;
+    transform: translateX(75%);
+}
+
+.slide-left:hover {
+    transform: translateX(0);
+}
+
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    padding: 0.5rem 1rem;
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main-btn:hover {
+    color: var(--yellow-color);
+    transform: scale(1.1);
+}
+.container .main-title .icon{
+    color: var(--green-color);
+    height: 100px;
+
+}
+
+.main-title::after{
+    content: '';
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+/* start navbar */
+.navbar {
+    background: linear-gradient(to left, #19283f, #33d1cc, #ffc400, #ff3150, #19283f);
+    background-size: 500% 100%;
+    animation: changeColors 20s linear infinite;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.navbar .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--green-color);
+}
+
+.navbar .navbar-nav .nav-link .active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:hover{
+    color: var(--green-color);
+
+    
+}
+
+.navbar .search{
+    border-left: var(--green-color);
+
+}
+
+.navbar .search svg{
+    color: var(--green-color);
+}
+
+.navbar-toggler {
+    display: none;
+    color: white;
+    font-size: 24px;
+    border: none;
+    background: none;
+}
+
+
+.navbar-nav .nav-item {
+    text-align: center;
+}
+
+.navbar-collapse {
+    display: flex !important;
+    justify-content: center;
+}
+/* end .navbar */
+/* star landing */
+.landing {
+    background: linear-gradient(to left, #19283f, #33d1cc, #ffc400, #ff3150, #19283f);
+    background-size: 500% 100%;
+    animation: changeColors 20s linear infinite;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* end landing */
+
+
+/* start featchers */
+.featchers .icon-holder {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.featchers .feat h4 {
+    color: var(--yellow-color);
+    margin-top: 1rem;
+}
+
+
+.featchers .icon-holder svg{
+    left: 50%;
+    transform: translateX(-50);
+}
+
+.featchers .icon-holder .number{
+    font-size: 12rem;
+    color: var(--section-color)
+
+}
+
+.featchers .icon-holder .icon{
+    color: var(--green-color);
+
+}
+
+
+/* end featchers */
+
+
+
+/* start ourwork */
+
+.ourwork {
+    background-color: var(--section-color);
+    padding: 2rem;
+}
+.ourwork ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.ourwork ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+
+.ourwork ul li {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+
+.ourwork ul li:not(.active):hover{
+    color: var(--red-color);
+}
+
+.ourwork .box {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.ourwork .box:hover {
+    transform: scale(1.05);
+}
+
+.ourwork .row .box {
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+.ourwork .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgba(51, 209, 204, 0.76);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    transition: transform 0.3s ease;
+    font-size: 1.5rem;
+    transform: translateX(-100%);
+}
+
+.ourwork .box:hover::before {
+    transform: translateX(0);
+}
+
+
+
+
+/* end ourwork */
+
+
+/* start stuff  */
+.stuff .des{
+    max-width: 400px;
+}
+/* start stuff  */
+
+/* start team */
+.Team{
+    background-color: var(--section-color);
+}
+
+.Team h2{
+    color: var(--yellow-color);
+}
+
+.Team .box h4{
+    background-color: var(--green-color);
+}
+
+
+
+.Team img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* end team */
+/* start project */
+
+.project{
+    background-color: var(--dark-color);
+    min-height: calc(100vh-72px);
+    background: linear-gradient(to left, #19283f, #33d1cc, #ffc400, #ff3150, #19283f);
+    background-size: 500% 100%;  /* Adjust the size based on your preference */
+    animation: changeColors 20s linear infinite;  /* 20s is the total duration, you can adjust it */
+}
+
+/* end project */
+
+
+/* start subscribe */
+
+.subscribe{
+    background-color: var(--yellow-color);
+}
+.makhsos {
+    color: #ff3150;
+}
+.subscribe input[type="text"]{
+    border: none;
+    border-bottom: 1px solid white;
+    color: #ff3150;
+
+}
+
+.subscribe input[type="text"]:focus{
+    outline: none;
+    color: #ffc400;
+}
+
+.subscribe ::placeholder{
+    color: #ffc400;
+}
+
+.subscribe input[type="submit"]{
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+    transition: transform 0.3s ease-in-out;
+}
+
+.subscribe input[type="submit"]:hover{
+    transform: scale(1.2); 
+}
+/* end subscribe */
+
+/* start footer  */
+
+.footer {
+    background-color: var(--dark-color);
+    padding: 1rem;
+    text-align: center;
+    color: white;
+}
+
+.footer .copyright span {
+    color: var(--green-color);
+    transition: color 0.3s ease-in-out;
+}
+.footer .copyright span:hover {
+    color: var(--yellow-color);
+}
+
+.footer .copyright div span {
+    color: var(--yellow-color);
+}
+
+.footer .contact ul svg{
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.footer .contact ul svg:hover {
+    transform: scale(1.2); 
+    background-color: var(--red-color);
+}
+
+
+.footer .facebook{
+    color: rgb(48, 132, 243);
+}
+
+.footer .x-twitter{
+    color: black;
+}
+
+.footer .instagram{
+    color: blueviolet;
+}
+.footer .youtube{
+    color: #ff3150;
+}
+/* end footer  */
+
+
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .navbar-toggler {
+        display: block;
+    }
+
+    .navbar .nav-link {
+        padding: 1rem;
+    }
+
+    .ourwork ul {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .landing {
+        padding: 1rem;
+    }
+
+    .featchers .icon-holder {
+        height: 150px;
+    }
+
+    .ourwork .box::before {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-btn {
+        font-size: 0.875rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .footer {
+        font-size: 0.875rem;
+    }
+}

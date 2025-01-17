@@ -1,0 +1,261 @@
+/* General Styles */
+@keyframes changeColors {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* Body */
+.Rooms {
+    background: linear-gradient(to left, #19283f, #33d1cc, #ffc400, #ff3150, #19283f);
+    background-size: 500% 100%; /* Smooth gradient effect */
+    animation: changeColors 20s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    margin-top: -100px;
+}
+
+/* Images in Carousel */
+.carousel-item img {
+    max-width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    height: 500px;
+}
+
+/* Page Title */
+h1 {
+    text-align: center;
+    color: #33d1cc;
+    margin-top: 50px;
+    font-size: 2.5rem;
+}
+
+h5 {
+    color: #33d1cc;
+}
+
+p {
+    color: #33d1cc;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+/* Room Container */
+.room {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Room Title */
+.room h2 {
+    color: #ff3150;
+    font-size: 1.8rem;
+}
+
+/* Book Button */
+.book-btn {
+    background-color: #ff3150;
+    color: #ffc400;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.book-btn:hover {
+    background-color: #dc1e3b;
+    transform: scale(1.05);
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Form Group */
+.form-group label {
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.form-group select {
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: #3d2e4f;
+    font-size: 1rem;
+    border: 1px solid #091e34;
+    color: #33d1cc;
+}
+
+.form-group select:hover {
+    border-color: #ffc400;
+}
+
+.form-group option {
+    background-color: #3d2e4f;
+    color: #ffc400;
+}
+
+/* Form Button */
+form button {
+    background: linear-gradient(to left, #19283f, #33d1cc, #ffc400, #ff3150, #19283f);
+    background-size: 500% 100%;
+    animation: changeColors 20s linear infinite;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+form button:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Responsive Styles */
+
+/* Small Devices: 768px and below */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 20px;
+    }
+
+    .room {
+        padding: 15px;
+        margin: 10px auto;
+        max-width: 90%;
+    }
+
+    .carousel-item img {
+        max-width: 100%;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        text-align: left;
+        margin-bottom: 5px;
+    }
+
+    .form-group select {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .book-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    form button {
+        font-size: 1rem;
+        padding: 10px;
+    }
+}
+
+/* Extra Small Devices: 480px and below */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .room h2 {
+        font-size: 1.5rem;
+    }
+
+    .room {
+        padding: 10px;
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group select {
+        font-size: 0.8rem;
+    }
+
+    .book-btn {
+        font-size: 0.8rem;
+        padding: 6px 12px;
+    }
+
+    form button {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+}
+
+/* Medium Devices: 992px and below */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .room {
+        max-width: 80%;
+    }
+
+    .form-group select {
+        width: 90%;
+    }
+}
